@@ -4,166 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./stylesheets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        #frontpage , #frontpage2{
-            width: 100%;
-            height: 514px;
-            background-image: url('https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw6d6f6893/images/HP/SS25/DESKTOP_BLOCK04-SS25NSL.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            position: relative;
-        }
-        #frontpage2{
-            background-position: top;
-            background-image: url('https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw431f3e49/images/HP/AW24/MOBILE_BLOCK05-PSWK52.png');
-        }
-
-        #frontpage::before , #frontpage::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0);
-            z-index: 1;
-        }
-
-        #frontpage h1 , #frontpage2 h1{
-            color: white;
-            font-size: 45px;
-            z-index: 2;
-            text-align: center;
-        }
-
-        #frontpage .buttons , #frontpage2 .buttons  {
-            display: flex;
-            gap: 20px;
-            z-index: 2;
-        }
-
-        #frontpage .buttons button , #frontpage2 .buttons button {
-            padding: 12px 24px;
-            border: 1px solid white;
-            background-color: white;
-            color: black;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
-
-        #frontpage .buttons button:hover , #frontpage2 .buttons button:hover {
-            background-color: lightgray;
-            color: black;
-        }
-        #frontpageimages , #frontpageimages2{
-            width: 100%;
-            height:614px;
-            display: flex;
-            margin-bottom: 20px;
-        }
-        #frontpageimages .img1 , #frontpageimages2 .img1 {
-            position: relative;
-            width: 50%;
-            height: 100%;
-            background-image: url('https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_2.0,f_auto,g_auto,h_1260,q_auto,w_900/v1/wh-catalog/images/00803976001/whistles-tie-front-beach-trouser-black-02?pgw=1&_i=AG');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        #frontpageimages .img2 , #frontpageimages2 .img2{
-            position: relative;
-            width: 50%;
-            height: 100%;
-            background-image: url('https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_2.0,f_auto,g_auto,h_1400,q_auto,w_1000/v1/wh-catalog/images/01203962580/whistles-v-neck-cable-detail-tank-ivory-02?pgw=1&_i=AG');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        #frontpageimages .img1 button, .img2 button , #frontpageimages2 .img1 button, .img2 button{
-            padding: 10px 20px;
-            border: none;
-            outline: none;
-            font-size: bold;
-            position: absolute;
-            transform: translate(-50%);
-            left: 50%;
-            bottom: 30px;
-        }
-        #likeproducts , #todaywhistles{
-            height: 120px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #likeproducts h1 , #todaywhistles h1{
-            font-size: 32px;
-        }
-
-        #discover-section {
-            width: 100%;
-            text-align: center;
-            padding: 30px 0;
-        }
-
-        .discover-links {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .discover-links a {
-            text-decoration: none;
-            color: black;
-        }
-
-        hr {
-            width: 80%;
-            margin: 20px auto;
-            border: 0.5px solid #ccc;
-        }
-
-        .info-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-            margin-top: 20px;
-            padding: 10px 0px 20px 0px;
-            border-bottom: 1px solid black;
-            width: 80%;
-            margin: auto;
-        }
-
-        .info-box {
-            text-align: center;
-            width: 200px;
-        }
-
-        .info-box img {
-            width: 30px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .klarna {
-            background-color: pink;
-            padding: 2px 5px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-
-    </style>
 </head>
 <body style="height: 1000px;">
     <section id="headerprice">
@@ -200,12 +45,53 @@
         </nav>
     </header>
     <div class="banner">Free Click & Collect</div>
-    <div id="frontpage">
-        <h1>Contemporary Spring Styles</h1>
-        <div class="buttons">
-            <a href="./new-in.html"><button class="shopnewin">SHOP NEW IN</button></a>
-            <button class="shopdressses">SHOP DRESSES</button>
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw6d6f6893/images/HP/SS25/DESKTOP_BLOCK04-SS25NSL.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+              <h1>Contemporary Spring Styles</h1>
+              <div class="buttons">
+                <a href="./new-in.html"><button class="shopnewin">SHOP NEW IN</button></a>
+              <button class="shopdressses">SHOP DRESSES</button>
+              </div>
+          </div>
         </div>
+        <div class="carousel-item">
+          <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dwff420273/images/HP/SS25/DESKTOP_BLOCK04-SS25MSS.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Contemporary Spring Styles</h1>
+            <div class="buttons">
+              <a href="./new-in.html"><button class="shopnewin">SHOP NEW IN</button></a>
+            <button class="shopdressses">SHOP DRESSES</button>
+            </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw6d6f6893/images/HP/SS25/DESKTOP_BLOCK04-SS25NSL.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Contemporary Spring Styles</h1>
+            <div class="buttons">
+              <a href="./new-in.html"><button class="shopnewin">SHOP NEW IN</button></a>
+            <button class="shopdressses">SHOP DRESSES</button>
+            </div>
+        </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
     <div id="frontpageimages">
         <div class="img1">
@@ -715,6 +601,7 @@
             </div>
         </div>
     </section>
+
     <footer>
         <section class="footersection">
             <div>
@@ -765,6 +652,87 @@
                 </ul>
             </div>
         </section>
-    </footer>
+        <div class="footersection2 accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Here to help
+                  </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><a href="#">Contact us</a></li>
+                          <li><a href="#">Delivery</a></li>
+                          <li><a href="#">Returns</a></li>
+                          <li><a href="#">FAQs</a></li>
+                          <li><a href="#">Payment</a></li>
+                          <li><a href="#">Track your order</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Shopping
+                  </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><a href="#">Black Friday</a></li>
+                          <li><a href="#">Gift cards</a></li>
+                          <li><a href="#">Store locator</a></li>
+                          <li><a href="#">Styling appointments</a></li>
+                          <li><a href="#">Size guide</a></li>
+                          <li><a href="#">Refer a friend</a></li>
+                          <li><a href="#">Klarna</a></li>
+                          <li><a href="#">Student & graduate discount</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      About us
+                  </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><a href="#">About us</a></li>
+                          <li><a href="#">Committed to change</a></li>
+                          <li><a href="#">Product care</a></li>
+                          <li><a href="#">Careers</a></li>
+                          <li><a href="#">Press & affiliates</a></li>
+                          <li><a href="#">CanopyStyle & Pack4GoodPolicy</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      Legal
+                  </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><a href="#">Terms & Conditions</a></li>
+                          <li><a href="#">Privacy Policy</a></li>
+                          <li><a href="#">Cookies</a></li>
+                          <li><a href="#">Accessibility</a></li>
+                          <li><a href="#">Gender Pay Gap</a></li>
+                          <li><a href="#">Modern Slavery Statement</a></li>
+                          <li><a href="#">Tax Strategy</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>
