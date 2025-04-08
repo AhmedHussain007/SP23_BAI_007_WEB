@@ -1,80 +1,141 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: "Roboto", serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
 }
 header{
-    z-index: 10;
-    background-color: white;
-    width: 100%;
-    padding-bottom: 8px;
+  z-index: 10;
+  background-color: white;
+  width: 100%;
+  padding-bottom: 8px;
 }
 #headerprice{
-    width: 100%;
-    height: 25px;
-    text-align: right;
-    padding: 0px 20px;
+  width: 100%;
+  height: 25px;
+  text-align: right;
+  padding: 0px 20px;
 }
 #headermain{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 32px;
 }
 #headermain .logo{
-    width: 188px;
+  width: 188px;
 }
 #headermain .icons{
-    display: flex;
-    gap: 15px;
-    margin: 0px 20px;
+  display: flex;
+  gap: 15px;
+  margin: 0px 20px;
 }
 #headermain .search{
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 #headermain .search input{
-    border: none;
-    outline: none;
-    font-size: 15px;
-    width: 156px;
-    height: 20px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  width: 156px;
+  height: 20px;
 }
 #headermain .search input::placeholder{
-    color: black;
+  color: black;
 }
 #headermenu ul{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 0px 12%;
-    gap: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0px 12%;
+  gap: 10px;
 }
 #headermenu ul li{
-
-    list-style: none;
+  list-style: none;
 }
 #headermenu ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 12px;
-    letter-spacing: 1px;
-    font-weight: 500;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 .banner{
-    height: 35px;
-    background-color: black;
-    color: white;
-    padding: 4px;
-    text-align: center;
-    line-height: 27px;
+  height: 35px;
+  background-color: black;
+  color: white;
+  padding: 4px;
+  text-align: center;
+  line-height: 27px;
 }
-    /* ---------------------- Header Completed ------------------- */
+
+.newin , .clothing , .dresses {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #f8f8f8;
+  padding: 10px 10px;
+}
+
+.newin-container , .clothing-container , .dresses-container{
+  display: flex;
+  gap: 10px;
+  margin: auto;
+}
+
+/* Category List */
+.newin-categories , .clothing-categories {
+  flex: 0.8;
+}
+
+.newin-categories h3 , .clothing-categories h3{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.newin-categories ul , .clothing-categories ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.newin-categories ul li a , .clothing-categories ul li a{
+  text-align: start;
+  text-decoration: none;
+  color: black;
+}
+
+/* Image Grid */
+.newin-images , .clothing-images {
+  display: flex;
+  gap: 20px;
+  flex: 2;
+}
+
+.newin-item , .clothing-item{
+  position: relative;
+  flex: 1;
+}
+
+.newin-item img , .clothing-item img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.extraspace{
+  flex: 1;
+}
+
+  /* ---------------------- Header Completed ------------------- */
 
 #products {
     padding:10px 30px;
