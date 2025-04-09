@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="scripts/script.js"></script>
+</head>
+<body style="height: 1000px;">
+    <section id="headerprice">
+        <p class="price">PK (Rs)</p>
+    </section>
+    <header  style="position: sticky; top: 0px;">
+        <section id="headermain">
+            <div class="logo">
+                <img src="./icons/logo.svg" alt="">
+            </div>
+            <div class="icons">
+                <div class="search">
+                    <img style="width: 19px;" src="./icons/search.svg" alt="">
+                    <input height="" type="text" placeholder="Search">
+                </div>
+                <img style="width: 16px;" src="./icons/location.svg" alt="">
+                <img style="width: 24px;" src="./icons/likes.svg" alt="">
+                <img style="width: 24px;" src="./icons/minicart.svg" alt="">
+                <img style="width: 24px;" src="./icons/account.svg" alt="">
+            </div>
+        </section>
+        <nav id="headermenu">
+          <ul>
+            <li onmouseenter="displaynewin()" onmouseleave="hidenewin()" class="newinh">
+                <a href="">NEW IN</a>
+                <div id="newin" class="newin">
+                    <div class="newin-container">
+                        <!-- Left side: Category list -->
+                        <div class="newin-categories">
+                            <h3>Shop by category</h3>
+                            <ul>
+                                <li><a href="#">All New in</a></li>
+                                <li><a href="#">New in dresses</a></li>
+                                <li><a href="#">New in tops</a></li>
+                                <li><a href="#">New in skirts</a></li>
+                                <li><a href="#">New in jumpsuits</a></li>
+                                <li><a href="#">New in shoes</a></li>
+                                <li><a href="#">New in accessories</a></li>
+                                <li><a href="#">Limited Edition</a></li>
+                                <li><a href="#">Back in stock</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Right side: Image grid -->
+                        <div class="newin-images">
+                            <div class="newin-item">
+                                <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw24d4a184/images/SS25/TN/TOPNAV_UKUSROW_NewDresses.jpg" alt="New in Dresses">
+                            </div>
+                            <div class="newin-item">
+                                <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw4de3be32/images/SS25/TN/TOPNAV_UKUSROW_NewTops.jpg" alt="New in Tops">
+                            </div>
+                        </div>
+                        <div class="extraspace"></div>
+                    </div>
+                </div>
+            </li>
+            <li onmouseenter="displayclothing()" onmouseleave="hideclothing()" class="clothingh">
+                <a href="">CLOTHING</a>
+                <div class="clothing">
+                    <div class="clothing-container">
+                        <!-- Categories Section -->
+                        <div class="clothing-categories">
+                            <h3>Shop by category</h3>
+                            <ul>
+                                <li><a href="#">All Clothing</a></li>
+                                <li><a href="#">Dresses</a></li>
+                                <li><a href="#">Jumpsuits</a></li>
+                                <li><a href="#">Tops</a></li>
+                                <li><a href="#">Trousers & Shorts</a></li>
+                                <li><a href="#">Skirts</a></li>
+                                <li><a href="#">Coats & Jackets</a></li>
+                                <li><a href="#">Knitwear</a></li>
+                                <li><a href="#">Jeans</a></li>
+                                <li><a href="#">Waistcoats</a></li>
+                                <li><a href="#">Shirts & Blouses</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Tailoring</a></li>
+                                <li><a href="#">Leather</a></li>
+                                <li><a href="#">Co-ords</a></li>
+                                <li><a href="#">Sweatshirts</a></li>
+                                <li><a href="#">Swimwear</a></li>
+                                <li><a href="#">Pyjamas</a></li>
+                                <li><a href="#">Brands</a></li>
+                            </ul>
+                        </div>
+                        <!-- Collections Section -->
+                        <div class="clothing-categories">
+                            <h3>Shop by collection</h3>
+                            <ul>
+                                <li><a href="#">Limited Edition</a></li>
+                                <li><a href="#">Essentials</a></li>
+                                <li><a href="#">Denim</a></li>
+                                <li><a href="#">Holiday Shop</a></li>
+                                <li><a href="#">Occasionwear</a></li>
+                                <li><a href="#">Workwear</a></li>
+                                <li><a href="#">Whistles Signatures</a></li>
+                                <li><a href="#">Shapewear</a></li>
+                                <li><a href="#">Gifting</a></li>
+                            </ul>
+                        </div>
+                        <!-- Image Section -->
+                        <div class="clothing-images">
+                            <div class="clothing-item">
+                                <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw9081ead0/images/SS25/TN/TOPNAV_UKUSROW_Jackets_2.jpg" alt="Shop Jackets">
+                            </div>
+                            <div class="clothing-item">
+                                <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw8440adaf/images/SS25/TN/TOPNAV_UKUSROW_Jumpsuits.jpg" alt="Shop Jumpsuits">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li onmouseenter="displaydresses()" onmouseleave="hidedresses()" >
+                <a href="">DRESSES</a>
+                <div class="dresses">
+                    <div class="dresses-container">
+                        <!-- Categories Section -->
+                        <div class="clothing-categories">
+                            <h3>Shop by category</h3>
+                            <ul>
+                                <li><a href="#">All dresses</a></li>
+                                <li><a href="#">New in dresses</a></li>
+                                <li><a href="#">Petite dresses</a></li>
+                                <li><a href="#">Casual dresses</a></li>
+                                <li><a href="#">Maxi dresses</a></li>
+                                <li><a href="#">Midi dresses</a></li>
+                                <li><a href="#">Mini dresses</a></li>
+                                <li><a href="#">Evening dresses</a></li>
+                                <li><a href="#">Printed dresses</a></li>
+                                <li><a href="#">Work dresses</a></li>
+                                <li><a href="#">Jumpsuits</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Color Section -->
+                        <div class="clothing-categories">
+                            <h3>Shop by colour</h3>
+                            <ul>
+                                <li><a href="#">Black dresses</a></li>
+                                <li><a href="#">Green dresses</a></li>
+                                <li><a href="#">Blue dresses</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Image Section -->
+                        <div class="clothing-images">
+                            <div class="clothing-item">
+                                <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw11b9b711/images/SS25/TN/TOPNAV_UKROW_CasualDresses.jpg" alt="Shop Casual Dresses">
+                            </div>
+                            <div class="clothing-item">
+                                <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dwa82b7ea2/images/SS25/TN/TOPNAV_UKROW_PetiteDresses.jpg" alt="Shop Petite Dresses">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li onmouseenter="displaynewin()" onmouseleave="hidenewin()" class="newinh">
+                <a href="">PETITE</a>
+            </li>
+            <li onmouseenter="displaynewin()" onmouseleave="hidenewin()" class="newinh" >
+                <a href="">SHOES</a>
+            </li>
+            <li  onmouseenter="displaydresses()" onmouseleave="hidedresses()" >
+                <a href="">BAGS & ACCESSORIES</a>
+            </li>
+            <li onmouseenter="displaynewin()" onmouseleave="hidenewin()" class="newinh">
+                <a href="">WEDDING</a>
+            </li>
+            <li><a href="">SALE</a></li>
+            <li><a href="">INSPIRATION</a></li>
+        </ul>
+        </nav>
+    </header>
+    <div class="banner">Free Click & Collect</div>
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw6d6f6893/images/HP/SS25/DESKTOP_BLOCK04-SS25NSL.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+              <h1>Contemporary Spring Styles</h1>
+              <div class="buttons">
+                <a href="./new-in.html"><button class="shopnewin">SHOP NEW IN</button></a>
+              <button class="shopdressses">SHOP DRESSES</button>
+              </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dwff420273/images/HP/SS25/DESKTOP_BLOCK04-SS25MSS.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Contemporary Spring Styles</h1>
+            <div class="buttons">
+              <a href="./new-in.html"><button class="shopnewin">SHOP NEW IN</button></a>
+            <button class="shopdressses">SHOP DRESSES</button>
+            </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw6d6f6893/images/HP/SS25/DESKTOP_BLOCK04-SS25NSL.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Contemporary Spring Styles</h1>
+            <div class="buttons">
+              <a href="./new-in.html"><button class="shopnewin">SHOP NEW IN</button></a>
+            <button class="shopdressses">SHOP DRESSES</button>
+            </div>
+        </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div id="frontpageimages">
+        <div class="img1">
+            <button>SHOP TROUSERS & JEANS</button>
+        </div>
+        <div class="img2">
+            <button>SHOP TOPS</button>
+        </div>
+    </div>
+    <div id="likeproducts">
+        <h1>You might also like</h1>
+    </div>
+    <div id="products">
+        <div class="product1 product">
+            <div class="img">
+                <img src="https://media.whistles.com/image/upload/f_auto,q_auto,dpr_auto/w_600/wh-catalog/images/00503969212/whistles-myra-denim-midi-dress-denim-01?_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+                <div class="imagedesc">NEW COLOR</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+                <div class="rating" style="display: flex; gap: 2px; font-size: 13px;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span class="reviews">(44)</span>
+                </div>
+            </div>
+        </div>
+        <div class="product product2">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_2.0,f_auto,g_auto,h_1260,q_auto,w_900/v1/wh-catalog/images/00803976001/whistles-tie-front-beach-trouser-black-02?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+            </div>
+        </div>
+        <div class="product product3">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/001003975801/whistles-beach-tie-front-top-black-01?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+            </div>
+        </div>
+        <div class="product product4">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/008039699115/whistles-lola-cotton-blend-trouser-washed-black-01?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+                <div class="imagedesc">LIMITED EDITION</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+                <div class="rating" style="display: flex; gap: 2px; font-size: 13px;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span class="reviews">(44)</span>
+                </div>
+            </div>
+        </div>
+        <div class="product1 product">
+            <div class="img">
+                <img src="https://media.whistles.com/image/upload/f_auto,q_auto,dpr_auto/w_600/wh-catalog/images/00503969212/whistles-myra-denim-midi-dress-denim-01?_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+                <div class="imagedesc">NEW COLOR</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+                <div class="rating" style="display: flex; gap: 2px; font-size: 13px;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span class="reviews">(44)</span>
+                </div>
+            </div>
+        </div>
+        <div class="product product2">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_2.0,f_auto,g_auto,h_1260,q_auto,w_900/v1/wh-catalog/images/00803976001/whistles-tie-front-beach-trouser-black-02?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+            </div>
+        </div>
+        <div class="product product3">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/001003975801/whistles-beach-tie-front-top-black-01?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+            </div>
+        </div>
+        <div class="product product4">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/008039699115/whistles-lola-cotton-blend-trouser-washed-black-01?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+                <div class="imagedesc">LIMITED EDITION</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+                <div class="rating" style="display: flex; gap: 2px; font-size: 13px;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span class="reviews">(44)</span>
+                </div>
+            </div>
+        </div>
+        <div class="product1 product">
+            <div class="img">
+                <img src="https://media.whistles.com/image/upload/f_auto,q_auto,dpr_auto/w_600/wh-catalog/images/00503969212/whistles-myra-denim-midi-dress-denim-01?_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+                <div class="imagedesc">NEW COLOR</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+                <div class="rating" style="display: flex; gap: 2px; font-size: 13px;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span class="reviews">(44)</span>
+                </div>
+            </div>
+        </div>
+        <div class="product product2">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_2.0,f_auto,g_auto,h_1260,q_auto,w_900/v1/wh-catalog/images/00803976001/whistles-tie-front-beach-trouser-black-02?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+            </div>
+        </div>
+        <div class="product product3">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/001003975801/whistles-beach-tie-front-top-black-01?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+            </div>
+        </div>
+        <div class="product product4">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/008039699115/whistles-lola-cotton-blend-trouser-washed-black-01?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+                <div class="imagedesc">LIMITED EDITION</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+                <div class="rating" style="display: flex; gap: 2px; font-size: 13px;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span class="reviews">(44)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="frontpage2">
+        <h1>Contemporary Spring Styles</h1>
+        <div class="buttons">
+            <button class="shopnewin">SHOP NEW IN</button>
+            <button class="shopdressses">SHOP DRESSES</button>
+        </div>
+    </div>
+    <div id="frontpageimages2">
+        <div class="img1">
+            <button>SHOP TROUSERS & JEANS</button>
+        </div>
+        <div class="img2">
+            <button>SHOP TOPS</button>
+        </div>
+    </div>
+    <div id="todaywhistles">
+        <h1>You might also like</h1>
+    </div>
+    <div id="products">
+        <div class="product1 product">
+            <div class="img">
+                <img src="https://media.whistles.com/image/upload/f_auto,q_auto,dpr_auto/w_600/wh-catalog/images/00503969212/whistles-myra-denim-midi-dress-denim-01?_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+                <div class="imagedesc">NEW COLOR</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+                <div class="rating" style="display: flex; gap: 2px; font-size: 13px;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span class="reviews">(44)</span>
+                </div>
+            </div>
+        </div>
+        <div class="product product2">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_2.0,f_auto,g_auto,h_1260,q_auto,w_900/v1/wh-catalog/images/00803976001/whistles-tie-front-beach-trouser-black-02?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+            </div>
+        </div>
+        <div class="product product3">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/001003975801/whistles-beach-tie-front-top-black-01?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+            </div>
+        </div>
+        <div class="product product4">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/008039699115/whistles-lola-cotton-blend-trouser-washed-black-01?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+                <div class="imagedesc">LIMITED EDITION</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+                <div class="rating" style="display: flex; gap: 2px; font-size: 13px;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span class="reviews">(44)</span>
+                </div>
+            </div>
+        </div>
+        <div class="product1 product">
+            <div class="img">
+                <img src="https://media.whistles.com/image/upload/f_auto,q_auto,dpr_auto/w_600/wh-catalog/images/00503969212/whistles-myra-denim-midi-dress-denim-01?_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+                <div class="imagedesc">NEW COLOR</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+                <div class="rating" style="display: flex; gap: 2px; font-size: 13px;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span class="reviews">(44)</span>
+                </div>
+            </div>
+        </div>
+        <div class="product product2">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_2.0,f_auto,g_auto,h_1260,q_auto,w_900/v1/wh-catalog/images/00803976001/whistles-tie-front-beach-trouser-black-02?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+            </div>
+        </div>
+        <div class="product product3">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/001003975801/whistles-beach-tie-front-top-black-01?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+            </div>
+        </div>
+        <div class="product product4">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/008039699115/whistles-lola-cotton-blend-trouser-washed-black-01?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+                <div class="imagedesc">LIMITED EDITION</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+                <div class="rating" style="display: flex; gap: 2px; font-size: 13px;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span class="reviews">(44)</span>
+                </div>
+            </div>
+        </div>
+        <div class="product1 product">
+            <div class="img">
+                <img src="https://media.whistles.com/image/upload/f_auto,q_auto,dpr_auto/w_600/wh-catalog/images/00503969212/whistles-myra-denim-midi-dress-denim-01?_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+                <div class="imagedesc">NEW COLOR</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+                <div class="rating" style="display: flex; gap: 2px; font-size: 13px;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span class="reviews">(44)</span>
+                </div>
+            </div>
+        </div>
+        <div class="product product2">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_2.0,f_auto,g_auto,h_1260,q_auto,w_900/v1/wh-catalog/images/00803976001/whistles-tie-front-beach-trouser-black-02?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+            </div>
+        </div>
+        <div class="product product3">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/001003975801/whistles-beach-tie-front-top-black-01?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+            </div>
+        </div>
+        <div class="product product4">
+            <div class="img">
+                <img src="https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/008039699115/whistles-lola-cotton-blend-trouser-washed-black-01?pgw=1&_i=AG" alt="Myra Denim Midi Dress" class="product-image">
+                <div class="addtobag">ADD TO BAG</div>
+                <div class="imagedesc">LIMITED EDITION</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>Myra Denim Midi Dress</h3>
+                    <span class="wishlist">&#9825;</span>
+                </div>
+                <p>£149</p>
+                <div class="rating" style="display: flex; gap: 2px; font-size: 13px;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span class="reviews">(44)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="discover-section">
+        <div class="discover-links">
+            <a href="#">DISCOVER MORE</a>
+            <a href="#">DISCOVER THE LOOKBOOK</a>
+            <a href="#">DISCOVER MORE</a>
+        </div>
+        <hr>
+        <div class="info-section">
+            <div class="info-box">
+                <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dwe1492828/images/usp/120724/5.png" alt="Delivery Icon">
+                <p>Next day delivery Mon-Thur order<br>by 2pm for delivery next working day</p>
+            </div>
+            <div class="info-box">
+                <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw1a56ca82/images/usp/120724/2.svg" alt="Size Icon">
+                <p>Our collection is available in<br>sizes UK 4-20</p>
+            </div>
+            <div class="info-box">
+                <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw148f2c86/images/footer/KlarnaLogo-USPbar.svg" alt="Klarna Icon">
+                <p><span class="klarna">Klarna</span> available at the checkout</p>
+            </div>
+            <div class="info-box">
+                <img src="https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dwd9aa5ea7/images/usp/120724/1.svg" alt="Returns Icon">
+                <p>Free returns on all UK orders</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="social">
+        <div id="socialsection">
+            <div>
+                <div class="followsection">
+                    <p>Follow us</p>
+                    <h4>Join our network</h4>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="./icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="./icons/twitter.svg" alt="Twitter"></a>
+                <a href="#"><img src="./icons/pinterest.svg" alt="Pinterest"></a>
+                <a href="#"><img src="./icons/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="./icons/tiktok.svg" alt="TikTok"></a>
+            </div>
+            <div class="firstorder">
+                <p>Subscribe</p>
+                <p>ENJOY 15% OFF YOUR FIRST ORDER</p>
+                <p>Availabe on full price for new customers only t&c's apply</p>
+            </div>
+            <div>
+                <div class="email-input">
+                    <input type="email" placeholder="YOUR EMAIL">
+                    <span>&#x276F;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <section class="footersection">
+            <div>
+                <ul>
+                    <p><strong>Here to help</strong></p>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="#">Track your order</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <p><strong>Shopping</strong></p>
+                    <li><a href="#">Black Friday</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                    <li><a href="#">Store locator</a></li>
+                    <li><a href="#">Styling appointments</a></li>
+                    <li><a href="#">Size guide</a></li>
+                    <li><a href="#">Refer a friend</a></li>
+                    <li><a href="#">Klarna</a></li>
+                    <li><a href="#">Student & graduate discount</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <p><strong>About us</strong></p>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Committed to change</a></li>
+                    <li><a href="#">Product care</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press & affiliates</a></li>
+                    <li><a href="#">CanopyStyle & Pack4GoodPolicy</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <p><strong>Legal</strong></p>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Gender Pay Gap</a></li>
+                    <li><a href="#">Modern Slavery Statement</a></li>
+                    <li><a href="#">Tax Strategy</a></li>
+                </ul>
+            </div>
+        </section>
+        <div class="footersection2 accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Here to help
+                  </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><a href="#">Contact us</a></li>
+                          <li><a href="#">Delivery</a></li>
+                          <li><a href="#">Returns</a></li>
+                          <li><a href="#">FAQs</a></li>
+                          <li><a href="#">Payment</a></li>
+                          <li><a href="#">Track your order</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Shopping
+                  </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><a href="#">Black Friday</a></li>
+                          <li><a href="#">Gift cards</a></li>
+                          <li><a href="#">Store locator</a></li>
+                          <li><a href="#">Styling appointments</a></li>
+                          <li><a href="#">Size guide</a></li>
+                          <li><a href="#">Refer a friend</a></li>
+                          <li><a href="#">Klarna</a></li>
+                          <li><a href="#">Student & graduate discount</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      About us
+                  </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><a href="#">About us</a></li>
+                          <li><a href="#">Committed to change</a></li>
+                          <li><a href="#">Product care</a></li>
+                          <li><a href="#">Careers</a></li>
+                          <li><a href="#">Press & affiliates</a></li>
+                          <li><a href="#">CanopyStyle & Pack4GoodPolicy</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      Legal
+                  </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><a href="#">Terms & Conditions</a></li>
+                          <li><a href="#">Privacy Policy</a></li>
+                          <li><a href="#">Cookies</a></li>
+                          <li><a href="#">Accessibility</a></li>
+                          <li><a href="#">Gender Pay Gap</a></li>
+                          <li><a href="#">Modern Slavery Statement</a></li>
+                          <li><a href="#">Tax Strategy</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

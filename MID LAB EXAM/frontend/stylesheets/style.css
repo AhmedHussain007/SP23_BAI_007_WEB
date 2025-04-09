@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+header{
+  z-index: 10;
+  background-color: white;
+  width: 100%;
+  padding-bottom: 8px;
+}
+#headerprice{
+  width: 100%;
+  height: 25px;
+  text-align: right;
+  padding: 0px 20px;
+}
+#headermain{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 32px;
+}
+#headermain .logo{
+  width: 188px;
+}
+#headermain .icons{
+  display: flex;
+  gap: 15px;
+  margin: 0px 20px;
+}
+#headermain .search{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#headermain .search input{
+  border: none;
+  outline: none;
+  font-size: 15px;
+  width: 156px;
+  height: 20px;
+}
+#headermain .search input::placeholder{
+  color: black;
+}
+#headermenu ul{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0px 12%;
+  gap: 10px;
+}
+#headermenu ul li{
+  list-style: none;
+  height: 100%;
+}
+#headermenu ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.banner{
+  height: 35px;
+  background-color: black;
+  color: white;
+  padding: 4px;
+  text-align: center;
+  line-height: 27px;
+}
+
+.newin , .clothing , .dresses{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #f8f8f8;
+  padding: 10px 10px;
+}
+.labmenu{
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 100%;
+  background: #f8f8f8;
+  padding: 10px 10px;
+}
+
+.newin-container , .clothing-container , .dresses-container{
+  display: flex;
+  gap: 10px;
+  margin: auto;
+}
+
+/* Category List */
+.newin-categories , .clothing-categories {
+  flex: 0.8;
+}
+
+.newin-categories h3 , .clothing-categories h3{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.newin-categories ul , .clothing-categories ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.newin-categories ul li a , .clothing-categories ul li a{
+  text-align: start;
+  text-decoration: none;
+  color: black;
+}
+
+/* Image Grid */
+.newin-images , .clothing-images {
+  display: flex;
+  gap: 20px;
+  flex: 2;
+}
+
+.newin-item , .clothing-item{
+  position: relative;
+  flex: 1;
+}
+
+.newin-item img , .clothing-item img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.extraspace{
+  flex: 1;
+}
+
+  /* ---------------------- Header Completed ------------------- */
+
+#products {
+    padding:10px 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+}
+
+.product {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.product .img {
+    position: relative;
+    overflow: hidden;
+}
+
+.product img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product .imagedesc{
+    position: absolute;
+    bottom: 2px;
+    left: 7px;
+    padding: 2px 4px 4px 3px ;
+    background-color: #F9F9F9;
+    letter-spacing: 1px;
+}
+
+.addtobag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    z-index: 10;
+    background-color: #F9F9F9;
+    transition: height 0.3s ease-in-out;
+}
+
+.product1:hover img {
+    content: url('https://media.whistles.com/image/upload/f_auto,q_auto,dpr_auto/w_600/wh-catalog/images/00503969212/whistles-myra-denim-midi-dress-denim-02?_i=AG');
+}
+
+.product2:hover img {
+    content: url('https://media.whistles.com/image/upload/f_auto,q_auto,dpr_auto/w_300/wh-catalog/images/00803976001/whistles-tie-front-beach-trouser-black-01?_i=AG%20300w,%20https://media.whistles.com/image/upload/f_auto,q_auto,dpr_auto/w_600/wh-catalog/images/00803976001/whistles-tie-front-beach-trouser-black-01?_i=AG%20600w,%20https://media.whistles.com/image/upload/f_auto,q_auto,dpr_auto/w_800/wh-catalog/images/00803976001/whistles-tie-front-beach-trouser-black-01?_i=AG%20800w,%20https://media.whistles.com/image/upload/f_auto,q_auto,dpr_auto/w_1000/wh-catalog/images/00803976001/whistles-tie-front-beach-trouser-black-01?_i=AG%201000w,%20https://media.whistles.com/image/upload/f_auto,q_auto,dpr_auto/w_1400/wh-catalog/images/00803976001/whistles-tie-front-beach-trouser-black-01?_i=AG%201400w');
+}
+
+.product3:hover img {
+    content: url('https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/001003975801/whistles-beach-tie-front-top-black-02?pgw=1&_i=AG');
+}
+
+.product4:hover img {
+    content: url('https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_1.0,f_auto,g_auto,h_840,q_auto,w_600/v1/wh-catalog/images/008039699115/whistles-lola-cotton-blend-trouser-washed-black-02?pgw=1&_i=AG');
+}
+
+.img:hover .addtobag {
+    height: 50px;
+}
+
+.img:hover .product-image {
+    transform: scale(1.1);
+}
+
+.product-info{
+    padding: 4px 5px;
+}
+/* Fix for 'addtobag' moving slightly up */
+.img {
+    display: flex;
+    flex-direction: column;
+}
+
+.img img {
+    flex-shrink: 0;
+}
+.product-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.product-name h3 {
+    font-size: 16px;
+    margin: 0;
+    flex: 1; /* Allows h3 to take available space */
+}
+
+.wishlist {
+    width: 24px; /* Fixed width for the wishlist icon */
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.rating {
+    font-size: 20px;
+    color: black;
+}
+
+.rating i {
+    color: gold;
+}
+
+.reviews {
+    margin-left: 5px;
+    color: black;
+}
+
+    /* ------------------------------------------- Product Section Ended ---------------------------------------- */
+
+.pagination {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.pagination .next{
+    position: absolute;
+    right: 0px;
+}
+.page, .next {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.page.active {
+    background-color: black;
+    color: white;
+}
+
+.page:hover, .next:hover {
+    background-color: #ddd;
+}
+
+/* -------------------------------------- Pagination Completed -------------------------------------- */
+
+#social {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+    padding: 24px 0px;
+}
+
+#socialsection {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+}
+
+.followsection p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.followsection h4 {
+    font-size: 16px;
+    margin: 5px 0 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.social-icons img {
+    width: 16px;
+}
+
+.firstorder {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    text-align: left;
+}
+
+.firstorder p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.email-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+}
+
+.email-input input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    flex: 1;
+    text-transform: uppercase;
+}
+
+.email-input input::placeholder {
+    color: black;
+}
+
+.email-input span {
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+}
+
+/*--------------------------------------  Social Section Completed  --------------------------------------*/
+footer{
+  width: 100%;
+}
+.footersection {
+  width: 80%;
+  margin: auto;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(4 , 1fr);
+  gap: 10px;
+  overflow: hidden;
+  justify-content: space-between;
+  padding: 30px 10px;
+  border-bottom: 1px solid black;
+}
+.footersection2{
+  display: none;
+  width: 80%;
+  padding: 30px 10px;
+  border-bottom: 1px solid black;
+  margin: auto;
+}
+.footersection p , .footersection2 p{
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding: 10px 0px;
+}
+.footersection li , .footersection2 li{
+    list-style-type: none;
+    line-height: 20px;
+    font-size: 14px;
+}
+.footersection a , .footersection2 a{
+    text-decoration: none;
+    color: black;
+}
+
+/*-------------------------------------- Footer Completed --------------------------------------*/
+
+
+/*------------------------------ New Added CSS picked from index --------------------------------*/
+#frontpage , #frontpage2{
+  width: 100%;
+  height: 514px;
+  background-image: url('https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw6d6f6893/images/HP/SS25/DESKTOP_BLOCK04-SS25NSL.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+#frontpage2{
+  background-position: top;
+  background-image: url('https://www.whistles.com/on/demandware.static/-/Library-Sites-WHSharedLibrary/default/dw431f3e49/images/HP/AW24/MOBILE_BLOCK05-PSWK52.png');
+}
+
+#frontpage::before , #frontpage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+
+#frontpage h1 , #frontpage2 h1{
+  color: white;
+  font-size: 45px;
+  z-index: 2;
+  text-align: center;
+}
+
+#frontpage .buttons , #frontpage2 .buttons  {
+  display: flex;
+  gap: 20px;
+  z-index: 2;
+}
+
+#frontpage .buttons button , #frontpage2 .buttons button {
+  padding: 12px 24px;
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#frontpage .buttons button:hover , #frontpage2 .buttons button:hover {
+  background-color: lightgray;
+  color: black;
+}
+#frontpageimages , #frontpageimages2{
+  width: 100%;
+  height:614px;
+  display: flex;
+  margin-bottom: 20px;
+}
+#frontpageimages .img1 , #frontpageimages2 .img1 {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-image: url('https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_2.0,f_auto,g_auto,h_1260,q_auto,w_900/v1/wh-catalog/images/00803976001/whistles-tie-front-beach-trouser-black-02?pgw=1&_i=AG');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#frontpageimages .img2 , #frontpageimages2 .img2{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-image: url('https://res.cloudinary.com/tfg-whistles/image/upload/fl_keep_dar/b_rgb:FFFFFF,c_fill,dpr_2.0,f_auto,g_auto,h_1400,q_auto,w_1000/v1/wh-catalog/images/01203962580/whistles-v-neck-cable-detail-tank-ivory-02?pgw=1&_i=AG');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#frontpageimages .img1 button, .img2 button , #frontpageimages2 .img1 button, .img2 button{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: bold;
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  bottom: 30px;
+}
+#likeproducts , #todaywhistles{
+  height: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#likeproducts h1 , #todaywhistles h1{
+  font-size: 32px;
+}
+
+#discover-section {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.discover-links {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.discover-links a {
+  text-decoration: none;
+  color: black;
+}
+
+hr {
+  width: 80%;
+  margin: 20px auto;
+  border: 0.5px solid #ccc;
+}
+
+.info-section {
+  display: grid;
+  grid-template-columns: repeat(4 , 1fr);
+  gap: 50px;
+  margin-top: 20px;
+  padding: 10px 0px 20px 0px;
+  border-bottom: 1px solid black;
+  width: 80%;
+  margin: auto;
+}
+
+.info-box {
+  text-align: center;
+}
+
+.info-box img {
+  width: 30px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.klarna {
+  background-color: pink;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+/*------------------------------------------- Responsivness Handled -------------------------------------------*/
+@media (max-width: 1024px) {
+  #products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets - display 2 columns */
+@media (max-width: 768px) {
+  #products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #socialsection {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .info-section {
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 50px;
+    margin-top: 20px;
+    padding: 10px 0px 20px 0px;
+  }
+  .footersection{
+    display: none !important;
+  }
+  .footersection2{
+    display: block;
+  }
+
+  .discover-links {
+    width: 60%;
+    overflow: hidden;
+    margin: auto;
+    gap: 30px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile - display 1 column */
+@media (max-width: 480px) {
+  #products {
+    grid-template-columns: 1fr;
+  }
+  #frontpageimages , #frontpageimages2{
+    flex-direction: column;
+    height:914px;
+  }
+  #frontpageimages .img1 , #frontpageimages2 .img1{
+    width: 100%;
+    /* height: auto; */
+  }
+  #frontpageimages .img2 , #frontpageimages2 .img2{
+    width: 100%;
+  }
+  #social {
+    height: 300px;
+}
+  #socialsection {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    height: auto;
+    overflow: hidden !important;
+  }
+  .discover-links {
+    width: 70%;
+    gap: 10px;
+  }
+}
