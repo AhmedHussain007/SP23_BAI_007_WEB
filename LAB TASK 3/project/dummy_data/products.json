@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Classic Men's T-Shirt",
+    "description": "A comfortable cotton t-shirt perfect for everyday wear.",
+    "price": 19.99,
+    "imageUrl": "/images/mens_tshirt.jpg",
+    "category": "Men",
+    "stock": 50,
+    "isAvailable": true,
+    "tags": ["casual", "cotton", "t-shirt"]
+  },
+  {
+    "title": "Men's Denim Jacket",
+    "description": "Stylish denim jacket that adds an edge to any outfit.",
+    "price": 59.99,
+    "imageUrl": "/images/mens_denim_jacket.jpg",
+    "category": "Men",
+    "stock": 30,
+    "isAvailable": true,
+    "tags": ["denim", "jacket", "outerwear"]
+  },
+  {
+    "title": "Men's Formal Shirt",
+    "description": "A crisp formal shirt for office or events.",
+    "price": 35.00,
+    "imageUrl": "/images/mens_formal_shirt.jpg",
+    "category": "Men",
+    "stock": 25,
+    "isAvailable": true,
+    "tags": ["formal", "shirt", "officewear"]
+  },
+  {
+    "title": "Men's Jogger Pants",
+    "description": "Comfort-fit joggers ideal for gym or casual wear.",
+    "price": 28.50,
+    "imageUrl": "/images/mens_joggers.jpg",
+    "category": "Men",
+    "stock": 40,
+    "isAvailable": true,
+    "tags": ["sportswear", "joggers", "fitness"]
+  },
+  {
+    "title": "Women's Summer Dress",
+    "description": "Light and breezy dress perfect for summer outings.",
+    "price": 42.00,
+    "imageUrl": "/images/womens_summer_dress.jpg",
+    "category": "Women",
+    "stock": 35,
+    "isAvailable": true,
+    "tags": ["dress", "summer", "casual"]
+  },
+  {
+    "title": "Women's Blazer",
+    "description": "Elegant blazer for professional or formal occasions.",
+    "price": 65.00,
+    "imageUrl": "/images/womens_blazer.jpg",
+    "category": "Women",
+    "stock": 20,
+    "isAvailable": true,
+    "tags": ["blazer", "formal", "office"]
+  },
+  {
+    "title": "Women's High-Waist Jeans",
+    "description": "Trendy high-waist jeans made with stretch denim.",
+    "price": 39.99,
+    "imageUrl": "/images/womens_jeans.jpg",
+    "category": "Women",
+    "stock": 45,
+    "isAvailable": true,
+    "tags": ["jeans", "denim", "fashion"]
+  },
+  {
+    "title": "Women's Knit Sweater",
+    "description": "Cozy and warm knit sweater for the chilly season.",
+    "price": 34.95,
+    "imageUrl": "/images/womens_sweater.jpg",
+    "category": "Women",
+    "stock": 27,
+    "isAvailable": true,
+    "tags": ["sweater", "knit", "winter"]
+  },
+  {
+    "title": "Kids' Cartoon T-Shirt",
+    "description": "Colorful t-shirt with fun cartoon prints for kids.",
+    "price": 14.99,
+    "imageUrl": "/images/kids_cartoon_tshirt.jpg",
+    "category": "Kids",
+    "stock": 60,
+    "isAvailable": true,
+    "tags": ["kids", "cartoon", "t-shirt"]
+  },
+  {
+    "title": "Kids' Denim Overalls",
+    "description": "Cute and durable overalls suitable for playtime.",
+    "price": 29.99,
+    "imageUrl": "/images/kids_denim_overalls.jpg",
+    "category": "Kids",
+    "stock": 32,
+    "isAvailable": true,
+    "tags": ["overalls", "playwear", "denim"]
+  },
+  {
+    "title": "Kids' Winter Jacket",
+    "description": "Insulated jacket to keep your child warm in winter.",
+    "price": 49.00,
+    "imageUrl": "/images/kids_winter_jacket.jpg",
+    "category": "Kids",
+    "stock": 22,
+    "isAvailable": true,
+    "tags": ["jacket", "winter", "kids"]
+  },
+  {
+    "title": "Kids' Pajama Set",
+    "description": "Soft cotton pajama set with fun patterns for bedtime.",
+    "price": 24.00,
+    "imageUrl": "/images/kids_pajamas.jpg",
+    "category": "Kids",
+    "stock": 38,
+    "isAvailable": true,
+    "tags": ["pajamas", "sleepwear", "cotton"]
+  },
+  {
+    "title": "Leather Wallet",
+    "description": "Premium leather wallet with multiple compartments.",
+    "price": 25.00,
+    "imageUrl": "/images/leather_wallet.jpg",
+    "category": "Accessories",
+    "stock": 50,
+    "isAvailable": true,
+    "tags": ["wallet", "leather", "accessory"]
+  },
+  {
+    "title": "Stylish Sunglasses",
+    "description": "UV-protected sunglasses with a classic design.",
+    "price": 18.50,
+    "imageUrl": "/images/sunglasses.jpg",
+    "category": "Accessories",
+    "stock": 60,
+    "isAvailable": true,
+    "tags": ["sunglasses", "style", "accessory"]
+  },
+  {
+    "title": "Canvas Backpack",
+    "description": "Durable backpack suitable for school or travel.",
+    "price": 39.00,
+    "imageUrl": "/images/canvas_backpack.jpg",
+    "category": "Accessories",
+    "stock": 34,
+    "isAvailable": true,
+    "tags": ["backpack", "travel", "school"]
+  },
+  {
+    "title": "Wool Scarf",
+    "description": "Soft wool scarf that keeps you warm and stylish.",
+    "price": 22.99,
+    "imageUrl": "/images/wool_scarf.jpg",
+    "category": "Accessories",
+    "stock": 44,
+    "isAvailable": true,
+    "tags": ["scarf", "winter", "wool"]
+  }
+]
