@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Book Store Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    body {
+      /* background-color: #000; */
+      color: #ddd;
+    }
+    .container {
+        background-color: #fff;
+        color: #000;
+        border-radius: 8px;
+      }
+
+    .cart-container {
+      /* background-color: #111; */
+      border: 1px solid #333;
+    }
+    .cart-image {
+      max-width: 80px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .price, .total {
+      font-weight: bold;
+      color: #ffc107;
+    }
+    .free-shipping {
+      color: #ffc107;
+    }
+    .book-title {
+      color: #ffc107;
+    }
+    .summary-box {
+      /* background-color: #1a1a1a; */
+      border: 1px solid #333;
+    }
+    .btn-primary {
+      background-color: #ffc107;
+      border-color: #ffc107;
+      color: #000;
+    }
+    .btn-outline-secondary {
+      border-color: #ffc107;
+      color: #ffc107;
+    }
+    .btn-outline-secondary:hover {
+      background-color: #ffc107;
+      color: #000;
+    }
+    hr {
+      border-color: #333;
+    }
+    a {
+      color: #ffc107;
+    }
+    .form-control, .form-select {
+      /* background-color: #222; */
+      border-color: #333;
+      color: black;
+    }
+  </style>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<%- include('../partials/user_header') %>
+<div class="container py-5">
+  <h2 class="mb-4" style="color: #000;" ><i class="bi bi-cart"></i> My Book Cart</h2>
+
+  <div class="row g-4 cart-container p-4 rounded mt-2">
+    <div class="col-md-8">
+
+      <% cartItems.forEach(function(item) { %>
+        <div class="d-flex align-items-center border-bottom border-secondary pb-3 mb-3">
+          <img src="<%= item.product.imageUrl || '/images/products/default-product.png' %>" class="cart-image me-3" alt="<%= item.product.title %>">
+          <div class="flex-grow-1">
+            <h5 class="product-title"><%= item.product.title %></h5>
+            <p class="mb-1"><%= item.product.category || 'Uncategorized' %></p>
+            <p class="text-success mb-1"><%= item.product.isAvailable ? 'In Stock' : 'Out of Stock' %></p>
+
+            <div class="d-flex gap-3 small mt-2">
+              <form action="/cart/remove/<%= item.product._id %>" method="POST" class="d-inline">
+                <input type="hidden" name="productId" value="<%= item.productId %>">
+                <button type="submit" class="btn btn-link p-0 text-danger" style="text-decoration: none;">
+                  <i class="bi bi-trash"></i> Remove
+                </button>
+              </form>
+
+              <form action="/products/wishlist/<%= item.product._id %>" method="POST" class="d-inline">
+                <input type="hidden" name="productId" value="<%= item.productId %>">
+                <button type="submit" class="btn btn-link p-0 text-danger" style="text-decoration: none;">
+                  <i class="bi <%= user.wishlist.includes(item.product._id.toString()) ? 'bi-heart-fill text-danger' : 'bi-heart' %>"></i> Wishlist
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="text-end">
+            <p class="price">$<%= item.price.toFixed(2) %></p>
+
+            <form action="cart/update-cart" method="POST" class="d-inline">
+              <input type="hidden" name="productId" value="<%= item.productId %>">
+              <select class="form-select w-auto d-inline" name="quantity" onchange="this.form.submit()">
+                <% for (let i = 1; i <= 10; i++) { %>
+                  <option value="<%= i %>" <%= item.quantity === i ? 'selected' : '' %>><%= i %></option>
+                <% } %>
+              </select>
+            </form>
+
+            <p class="total mt-2">$<%= (item.price * item.quantity).toFixed(2) %></p>
+          </div>
+        </div>
+      <% }); %>
+
+
+      <p><strong><%= cartItems.length %> Products</strong></p>
+      <p><strong>$<%= subtotal.toFixed(2) %></strong></p>
+
+    </div>
+
+    <div class="col-md-4">
+      <!-- Summary -->
+      <div class="summary-box p-3 rounded">
+        <label for="promoCode" class="form-label">ENTER PROMO CODE</label>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="promoCode" placeholder="Promo Code">
+          <button class="btn btn-primary">Apply</button>
+        </div>
+
+        <div class="d-flex justify-content-between ">
+          <span>Subtotal</span>
+          <span>$<%= subtotal.toFixed(2) %></span>
+        </div>
+        <div class="d-flex justify-content-between ">
+          <span>Shipping cost</span>
+          <span>$<%= shipping.toFixed(2) %></span>
+        </div>
+        <div class="d-flex justify-content-between ">
+          <span>Discount</span>
+          <span>-$<%= discount.toFixed(2) %></span>
+        </div>
+        <div class="d-flex justify-content-between mb-2 ">
+          <span>Tax</span>
+          <span>$<%= tax.toFixed(2) %></span>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between">
+          <strong>Estimated Total</strong>
+          <strong>$<%= estimatedTotal.toFixed(2) %></strong>
+        </div>
+
+
+
+        <p class="mt-2 small">or 4 payments of $12.65 with <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Afterpay-logo.svg/120px-Afterpay-logo.svg.png" style="height: 20px; filter: invert(1);" alt="Afterpay"></p>
+
+        <p class="free-shipping"><i class="bi bi-check-circle"></i> Free shipping on orders over $35!</p>
+
+        <form action="/cart/place-order" method="GET">
+            <button type="submit" class="btn btn-primary w-100">Place Order</button>
+        </form>
+        <button onclick="window.location.href='/'" class="btn btn-outline-secondary w-100 mt-2">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('../partials/footer') %>
+<script src="/js/script.js"></script>
+</body>
+</html>
